@@ -3,7 +3,10 @@
     margin: 0;
     padding: 0;
 }
+
 nav{
+    display: flex;
+    justify-content: space-between;
     background-color: #1f1f1f;
     padding: 32px;
     min-height: 80px;
@@ -12,25 +15,22 @@ nav img{
     max-height: 48px;
     background-color: white;
 }
-.spacer{
-    /* border: 1px solid yellow; */
+/* .spacer{
+    border: 1px solid yellow;
     display: inline-block;
-    /* Paren widdth - Logo width - Menu <ul> width */
+    Paren widdth - Logo width - Menu <ul> width
     width: calc(100% - 40px - 280px);
-}
+} */
 nav ul{
     list-style: none;
-    display: inline-block;
-    margin-bottom: 20px;
-    vertical-align: bottom;
+    display: flex;
+    gap: 16px;
+    align-items: center;
 }
 nav ul li{
-    display: inline-block;
-    margin-right: 20px;
+    display: flex;
 }
-nav ul li:last-child{
-    margin-right: 0px;
-}
+
 nav ul li a{
     text-decoration: none;
 }
@@ -56,7 +56,7 @@ main{
     display: inline-block;
 }
 
-/* First page */
+/* Home page */
 
 .image{
     float: left;
@@ -64,7 +64,7 @@ main{
 main article .image img{
     height: 250px;
 }
-/* Second Page */
+/* About Page */
 
 .image-2{
     float: right;
@@ -73,36 +73,42 @@ main article .image-2 img{
     height: 250px;
 }
 
-/* Third Page */
+/* Contact Page */
+.contact-container{
+    padding: 10px 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex: 2 1 100px; */
+}
 
 .left{
-    margin: 20px;
     border: 1px black solid;
-    width: 600px;
-    height: 200px;
-    float: left;
+    flex-basis: 400px;
+    flex-grow: 1;
+    flex-shrink: 1;
+
 }
 
 .right{
-    margin: 20px;
     border: 1px black solid;
-    width: 600px;
-    height: 200px;
-    float: right;
+    flex-basis: 400px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    
 }
 
 .both{
-    margin: 20px;
     border: 1px black solid;
-    
-    height: 200px;
-    clear: both;
+    flex-basis: 840px;
+    flex-grow: 1;
+    flex-shrink: 1;
+
 }
 
-main .right img{
-    height: 150px;
-}
-
+/* Service Page */
 section{
     width: calc(100% - 204px);
     height: 615px;
@@ -165,21 +171,80 @@ main nav ul li a:active {
     color: green;
 }
 
-footer{
-    background-color: #1f1f1f;
-    text-align: center;
+/* FAQ Page */
+main{
+    display: flex;
     padding: 20px;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+main div.navegation-gallery{
+    padding: 20px;
+    border: #1f1f1f 1px solid;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100px;
+    flex-grow:1;
+    flex-shrink: 1;
+    gap: 15px;
+}
+
+main div.navegation-gallery div{
+    display: flex;
+    border: #1f1f1f 1px solid;
+    flex-basis: 40px;
+}
+
+main div.gallery{
+    border: #1f1f1f 1px solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-basis: 50px;
+    flex-grow: 7;
+    flex-shrink: 1;
+    gap: 20px;
+}
+
+    main div.gallery div{
+        display: flex;
+        border: #1f1f1f 1px solid;
+
+    }
+main div.gallery div img{
+    display: flex;
+    height: 200px;
+}
+
+
+
+/* Footer Section */
+
+footer{
+    display: flex;
+    background-color: #1f1f1f;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 0px;
 }
 footer nav{
-    padding-top: 0px;
-    padding-bottom: 10px;
-    min-height: 40px;
+    justify-content: center;
+    padding: 0px;
+    min-height: 0px;
 }
-footer nav ul{
-    margin-bottom: 0px;}
+
 .spacer_two{
-    display: inline-block;
+    display: flex;
+    align-items: center;
     border: 1px solid white;
     width: calc(100% - 100px);
-    margin-bottom: 10px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
 }
