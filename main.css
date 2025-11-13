@@ -146,13 +146,10 @@ main nav h2{
 }
 
 main nav ul{
-    text-align: left;
-    padding: 0px 30px 0px 30px;
+    display: flex;
+    flex-direction: column;
 }
 
-main nav ul li{
-    display: block;
-}
 main nav ul li a{
     font-size: 18px;
 }
@@ -175,7 +172,7 @@ main nav ul li a:active {
 main{
     display: flex;
     padding: 20px;
-    gap: 10px;
+    gap: 20px;
     justify-content: flex-start;
     flex-direction: row;
     align-items: stretch;
@@ -187,37 +184,46 @@ main div.navegation-gallery{
     display: flex;
     flex-direction: column;
     flex-basis: 100px;
-    flex-grow:1;
+    flex-grow: 1;
     flex-shrink: 1;
     gap: 15px;
+}
+
+#color{
+    background-color: lightblue;
 }
 
 main div.navegation-gallery div{
     display: flex;
     border: #1f1f1f 1px solid;
     flex-basis: 40px;
+    background-color: aliceblue;
 }
 
 main div.gallery{
     border: #1f1f1f 1px solid;
+    padding: 80px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    flex-basis: 50px;
+    flex-basis: 100px;
     flex-grow: 7;
     flex-shrink: 1;
     gap: 20px;
+    background-color: azure;
 }
 
     main div.gallery div{
         display: flex;
         border: #1f1f1f 1px solid;
+        max-height: 230px;
+        background-color: white;
 
     }
 main div.gallery div img{
     display: flex;
-    height: 200px;
+    height: 230px;
 }
 
 
